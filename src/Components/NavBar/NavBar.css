@@ -1,0 +1,58 @@
+.mainNav{
+    width: 100%;
+    position: sticky;
+    background-color:#fff;
+    top: 0;
+    height: 5rem;
+    display: grid;
+    grid-template-columns: 10rem 1fr 2fr 10rem;
+    box-shadow: rgba(50,50,93,0.25) 0px 50px 100px -20px,
+    rgba(0,0,0,0.3) 0px 30px 60px -30px;
+}
+.navLogo{
+    font-size:20px;
+    font-weight: bolder;
+    display: grid;
+    grid-column: 2/3;
+    justify-content: start;
+    align-items: center;
+}
+.navLogo a{
+   font-size:30px;
+    font-weight: bolder; 
+    text-decoration: none;
+    color: black;
+}
+.navLogo span{
+    color: red;
+}
+.menuLink{
+    grid-column:3/4;
+}
+.menuLink ul{
+    list-style-type: none;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.menuLink ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+
+}
+.menuLink ul li a:hover{
+    color: red;
+
+}
+.login{
+    border: 1px solid red;
+    padding:8px;
+    border-radius:5px;
+}
+.login:hover{
+    background-color:black;
+    color:white !important;
+}
