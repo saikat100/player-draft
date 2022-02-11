@@ -8,6 +8,8 @@
     grid-template-columns: 10rem 1fr 2fr 10rem;
     box-shadow: rgba(50,50,93,0.25) 0px 50px 100px -20px,
     rgba(0,0,0,0.3) 0px 30px 60px -30px;
+    /* align-items: center;
+    justify-content: center; */
 }
 .navLogo{
     font-size:20px;
@@ -16,6 +18,9 @@
     grid-column: 2/3;
     justify-content: start;
     align-items: center;
+}
+.nav-item{
+    margin-top:20px;
 }
 .navLogo a{
    font-size:30px;

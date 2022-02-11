@@ -12,7 +12,7 @@ const NavBar = () => {
 				</a>
 			</div>
 			<div className={click ? "menuLink mobileMenuLink" : "menuLink"}>
-				<ul>
+				<ul className="nav-item">
 					<li>
 						<a className="nav-links" href="/">
 							Home
@@ -20,7 +20,7 @@ const NavBar = () => {
 					</li>
 					<li>
 						<a className="nav-links" href="/playerList">
-							Player
+							Player List
 						</a>
 					</li>
 					<li>
