@@ -1,21 +1,32 @@
 import React from 'react';
-import { Container, Row } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import PlayerData from '../../PlayerData/mainFake.json';
 import SinglePlayer from '../SinglePlayer/SinglePlayer';
+import "./Home.css";
 
 const Home = () => {
     return (
-			<section className="news-container pt-5" id="blog">
-				<Container className="py-5">
-					<h3 className="text-center text-lobster">
-						All<span> Players</span>
+			<section className="d-flex">
+				<Row className="p-5">
+					<h3 className="text-center">All Players</h3>
+					{PlayerData.map((player) => (
+						<SinglePlayer key={player.id} player={player} />
+					))}
+				</Row>
+				<Col className="p-5 added-section">
+					<h3 className="text-center">
+						Added<span className="added-player-span">Players</span>
 					</h3>
-					<Row className="mt-5">
-						{PlayerData.map((player) => (
-							<SinglePlayer key={player.id} player={player} />
-						))}
-					</Row>
-				</Container>
+					<p>No. of players added: 5</p>
+					<p>
+						<img
+							className="added-player-img m-1"
+							src="https://i.ibb.co/ydN84p2/Shakib.png"
+							alt="added-player-img"
+						/>
+						Sakib Al Hasan : $ 5000
+					</p>
+				</Col>
 			</section>
 		);
 };

@@ -1,0 +1,12 @@
+.added-section{
+    width: 100%;
+    border-left: 1px solid red;
+}
+.added-player-span{
+    padding-left: 6px;
+}
+.added-player-img{
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
