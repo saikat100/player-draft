@@ -33,3 +33,7 @@
 .add-player-btn{
 	margin-left:5px;
 }
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}

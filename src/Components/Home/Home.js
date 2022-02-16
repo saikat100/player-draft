@@ -1,31 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Row, Col } from "react-bootstrap";
 import PlayerData from '../../PlayerData/mainFake.json';
 import SinglePlayer from '../SinglePlayer/SinglePlayer';
+import Card from './Card/Card';
 import "./Home.css";
 
 const Home = () => {
+	const [addedPlayer, setAddedPlayer] = useState([])
+	const handleAddedPlayer = (player) => {
+		const newAddedPlayer = [...addedPlayer, player];
+		setAddedPlayer(newAddedPlayer);
+	 }
     return (
 			<section className="d-flex">
 				<Row className="p-5">
-					<h3 className="text-center">All Players</h3>
+					<h4 className="text-center m-3">All Players</h4>
 					{PlayerData.map((player) => (
-						<SinglePlayer key={player.id} player={player} />
+						<SinglePlayer
+							key={player.id}
+							player={player}
+							handleAddedPlayer={handleAddedPlayer}
+						/>
 					))}
 				</Row>
 				<Col className="p-5 added-section">
-					<h3 className="text-center">
+					<h4 className="text-center m-3">
 						Added<span className="added-player-span">Players</span>
-					</h3>
-					<p>No. of players added: 5</p>
-					<p>
-						<img
-							className="added-player-img m-1"
-							src="https://i.ibb.co/ydN84p2/Shakib.png"
-							alt="added-player-img"
-						/>
-						Sakib Al Hasan : $ 5000
-					</p>
+					</h4>
+					<Card key={addedPlayer.id} addedPlayer={addedPlayer}></Card>
 				</Col>
 			</section>
 		);

@@ -1,5 +1,5 @@
 .added-section{
-    width: 100%;
+    width: 30%;
     border-left: 1px solid red;
 }
 .added-player-span{
@@ -7,6 +7,7 @@
 }
 .added-player-img{
     width: 30px;
+    height: 35px;
     border-radius: 50%;
     border: 1px solid red;
 }

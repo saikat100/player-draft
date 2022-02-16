@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Col, Button } from "react-bootstrap";
 import './SinglePlayer.css';
 
-const SinglePlayer = ({ player: { name, picture, country, icon, salary }}) => {
+const SinglePlayer = (props) => {
+	const [disable, setDisable] = useState(false);
+	const { name, picture, country, icon, salary } = props.player;
 	return (
 		<Col md="auto" className="player-card m-2 p-2">
 			<img className="player-img" src={picture} alt="" />
@@ -13,7 +15,13 @@ const SinglePlayer = ({ player: { name, picture, country, icon, salary }}) => {
 			<p className="text-center">country: {country}</p>
 			<div className="d-flex">
 				<h6 className="salary">Salary: $ {salary}</h6>
-				<Button variant="danger">
+				<Button
+					variant="danger"
+					disabled={disable}
+					onClick={() =>
+						props.handleAddedPlayer(props.player) & setDisable(true)
+					}
+				>
 					<i className="fa fa-plus solid fa-user-plus"></i> Add Player
 				</Button>
 			</div>
