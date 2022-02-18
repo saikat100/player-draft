@@ -20,7 +20,7 @@ const NavBar = () => {
 					</li>
 					<li>
 						<a className="nav-links" href="/playerList">
-							Player List
+							Player<span className="nav-span">List</span>
 						</a>
 					</li>
 					<li>
