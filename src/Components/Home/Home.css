@@ -1,5 +1,4 @@
 .all-player-heading{
-    font-size:15px;
     color: red;
 }
 .added-section{
@@ -27,6 +26,9 @@
 }
 .added-player-heading{
     margin-top:45px;
+    font-size:15px;
+}
+.all-player-heading{
     font-size:15px;
 }
 }
