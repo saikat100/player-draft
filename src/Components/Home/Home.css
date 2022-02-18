@@ -1,6 +1,15 @@
+.all-player-heading{
+    font-size:15px;
+    color: red;
+}
 .added-section{
-    width: 30%;
+    padding: 50px;
+    width: 100%;
     border-left: 1px solid red;
+}
+.added-player-heading{
+    margin-top:20px;
+    margin-bottom:20px;
 }
 .added-player-span{
     padding-left: 6px;
@@ -10,4 +19,14 @@
     height: 35px;
     border-radius: 50%;
     border: 1px solid red;
+}
+
+@media only screen and (max-width: 600px) {
+  .added-section{
+    padding: 10px;
+}
+.added-player-heading{
+    margin-top:45px;
+    font-size:15px;
+}
 }

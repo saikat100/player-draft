@@ -14,7 +14,7 @@ const Home = () => {
     return (
 			<section className="d-flex">
 				<Row className="p-5">
-					<h4 className="text-center m-3">All Players</h4>
+					<h4 className="text-center all-player-heading">All Players</h4>
 					{PlayerData.map((player) => (
 						<SinglePlayer
 							key={player.id}
@@ -23,8 +23,8 @@ const Home = () => {
 						/>
 					))}
 				</Row>
-				<Col className="p-5 added-section">
-					<h4 className="text-center m-3">
+				<Col className="added-section">
+					<h4 className="text-center text-danger added-player-heading">
 						Added<span className="added-player-span">Players</span>
 					</h4>
 					<Card key={addedPlayer.id} addedPlayer={addedPlayer}></Card>
